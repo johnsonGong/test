@@ -15,11 +15,6 @@ $(function() {
     function loopDom(jqObj) {
 
         jqObj.each(function(idx, item) {
-//          var childs = $(this).children();
-//
-//          if(childs.length ) {
-//
-//          }
 
             if($(this).children().length === 0) {
                 console.log("id: " + $(this).attr("id") + ", text: " + $(this).text());
