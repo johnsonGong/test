@@ -10,18 +10,29 @@ $(function() {
 
     var target = $("#div01");
 
-    loopDom(target);
+    var txt = [];
+    var textAry = loopDom(target);
+
+    var txtJoinTxt =  txt.join("[##]");
+    console.log("txtJoinTxt:" + txtJoinTxt);
+
+    var afterRep = txtJoinTxt.replace(/\n/, "");
+    afterRep = afterRep.replace(/\s/, "");
+    console.log("afterRep:" + afterRep);
 
     function loopDom(jqObj) {
 
         jqObj.each(function(idx, item) {
 
             if($(this).children().length === 0) {
-                console.log("id: " + $(this).attr("id") + ", text: " + $(this).text());
+                // console.log("id: " + $(this).attr("id") + ", text: " + $(this).text());
+                txt.push("id: " + $(this).attr("id") + ", text: " + $(this).text())
             } else {
                 loopDom($(this).children());
             }
 
         });
+
+        // return txt;
     }
 });
