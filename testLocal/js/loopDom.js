@@ -16,9 +16,11 @@ $(function() {
     var txtJoinTxt =  txt.join("[##]");
     console.log("txtJoinTxt:" + txtJoinTxt);
 
-    var afterRep = txtJoinTxt.replace(/\n/, "");
-    afterRep = afterRep.replace(/\s/, "");
-    console.log("afterRep:" + afterRep);
+    // var afterRep = txtJoinTxt.replace(/\n/, "");
+    // afterRep = afterRep.replace(/\s/, "");
+    // console.log("afterRep:" + afterRep);
+
+    // TODO, GONGLONG;
 
     function loopDom(jqObj) {
 
@@ -26,7 +28,10 @@ $(function() {
 
             if($(this).children().length === 0) {
                 // console.log("id: " + $(this).attr("id") + ", text: " + $(this).text());
-                txt.push("id: " + $(this).attr("id") + ", text: " + $(this).text())
+                if($(this).attr("id") == '') {
+                    
+                }
+                txt.push("id: " + $(this).attr("id") + ", text-length: " + $(this).text().length);
             } else {
                 loopDom($(this).children());
             }
