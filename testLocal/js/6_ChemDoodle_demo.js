@@ -22,17 +22,47 @@ $(function() {
     showMolecule(mol);
 
     ChemDoodle.io.file.content('./data/benzene.mol', function(fileContent) {
-        console.log("ChemDoodle.io.file-->");
+        console.log("callback, ChemDoodle.io.file-->");
         var mol = ChemDoodle.readMOL(fileContent);
         showMolecule(mol);
     });
 
     // TODO, 未获得/设置 许可证.
-    ChemDoodle.iChemLabs.getMoleculeFromDatabase('morphine', {
-        'database': 'pubchem'
-    }, function(mol) {
-        console.log("getMoleculeFromDatabase-->");
-        showMolecule(mol);
+    //  console.error("iChemLabs.getMoleculeFromDatabase, 未获得/设置 许可证.");
+    //  ChemDoodle.iChemLabs.getMoleculeFromDatabase('morphine', {
+    //      'database': 'pubchem'
+    //  }, function(mol) {
+    //      console.log("getMoleculeFromDatabase-->");
+    //      showMolecule(mol);
+    //  });
+
+    // viewACS_1
+    var viewACS = new ChemDoodle.ViewerCanvas('viewACS_1', 100, 100);
+    viewACS.specs.bonds_width_2D = .6;
+    viewACS.specs.bonds_saturationWidth_2D = .18;
+    viewACS.specs.bonds_hashSpacing_2D = 2.5;
+    viewACS.specs.atoms_font_size_2D = 10;
+    viewACS.specs.atoms_font_families_2D = ['Helvetica', 'Arial', 'sans-serif'];
+    viewACS.specs.atoms_displayTerminalCarbonLabels_2D = true;
+
+    ChemDoodle.io.file.content('./data/benzene.mol', function(fileContent) {
+        var mol = ChemDoodle.readMOL(fileContent);
+        mol.scaleToAverageBondLength(14.4);
+        viewACS.loadMolecule(mol);
+    });
+
+    // transformCanvas_1
+    var transform = new ChemDoodle.TransformCanvas('transformCanvas_1', 350, 200, true);
+    transform.specs.bonds_useJMOLColors = true;
+    transform.specs.bonds_width_2D = 3;
+    transform.specs.atoms_display = false;
+    transform.specs.backgroundColor = 'black';
+    transform.specs.bonds_clearOverlaps_2D = true;
+
+    ChemDoodle.io.file.content('./data/benzene.mol', function(fileContent) {
+        var mol = ChemDoodle.readMOL(fileContent);
+        mol.scaleToAverageBondLength(14.4);
+        transform.loadMolecule(mol);
     });
 
 
@@ -51,4 +81,6 @@ $(function() {
             ' atoms and ' + mol.bonds.length + ' bonds.';
         console.log("moleculeMsg:" + moleculeMsg);
     }
+
+
 });

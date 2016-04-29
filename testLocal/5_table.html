@@ -5,11 +5,18 @@
 		<title>分页 table</title>
 		
 		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="libs/jquery-1.11.1.js" ></script>
+		
+		<style>
+		    table {
+		        margin-top: 10px;
+		    }
+		</style>
 	</head>
 	<body>
 	    
-	    <p>分页 遭遇table...</p>
-	    <div class="comm-container">
+	    <p>分页 遭遇table...rowspan="2" </p>
+	    <div id="main_box" class="comm-container">
 	        <table id="main_table">
 	            
 	            <tbody>
@@ -45,13 +52,13 @@
                     <tr id="tr_5">
                         <td>jim</td>
                         <td>25</td>
-                         
                     </tr>
-
-                    
 	            </tbody>
 	        </table>
 	        
+	    </div>
+	    <div>
+	        <button id='split_btn'>开始拆分</button>
 	    </div>
 	    
 	    <script type="text/javascript" src="js/5_table.js" ></script>
