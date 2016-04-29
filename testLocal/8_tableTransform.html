@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>表格比例缩小</title>
+        
+        <link rel="stylesheet" href="css/main.css" />
+        
+        <script type="text/javascript" src="libs/jquery-1.11.1.js" ></script>
+        
+        <style>
+            center {
+                background-color: pink;
+            }
+            
+            .btn {
+                width: 30%;
+                height: 50px;
+            }
+            
+            .transform-table {
+                transform: translate(-229.5px, 0px) scale(0.395, 1);
+                -ms-transform : translate(-229.5px, 0px) scale(0.395, 1);
+                -moz-transform :translate(-229.5px, 0px) scale(0.395, 1);
+                -webkit-transform :translate(-229.5px, 0px) scale(0.395, 1);
+                -o-transform :translate(-229.5px, 0px) scale(0.395, 1);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <p>
+            表格比例缩小: transform: translate(-207px, 0) scale(0.73);
+        </p>
+        <p> 目标: 宽度 300px; </p>
+        <div id="" style=" background-color: rgba(0,0,0, .1); padding: 20px;">
+            <center>
+                <table id="table0">
+                    <tbody>
+                        <tr>
+                            <td style="width:48.75pt;" rowspan="2">
+                                <p style="text-align:justify"><span>排名</span></p>
+                            </td>
+                            <td style="width:48.75pt;" rowspan="2">
+                                <p style="text-align:justify"><span>总分</span></p>
+                            </td>
+                            <td style="width:48.7pt;" rowspan="2">
+                                <p style="text-align:justify"><span>地区</span></p>
+                            </td>
+                            <td style="width:332.35pt;" colspan="6">
+                                <p style="text-align:justify"><span>地区内高校数量</span><span>/</span><span>所</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>重点大学</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>一般大学</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>民办院校</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>独立学院</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>高职高专院校</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>总数</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>1</span></p>
+                            </td>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>100.00</span></p>
+                            </td>
+                            <td style="width:48.7pt;">
+                                <p style="text-align:justify"><span>北京</span></p>
+                            </td>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>30</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>28</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>10</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>5</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>26</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>91</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>2</span></p>
+                            </td>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>74.42</span></p>
+                            </td>
+                            <td style="width:48.7pt;">
+                                <p style="text-align:justify"><span>江苏</span></p>
+                            </td>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>12</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>33</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>27</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>25</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>83</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>159</span></p>
+                            </td>
+                        </tr> 
+                        
+                    </tbody>
+                </table>
+            </center>
+            </div>
+        <div id="" style=" background-color: rgba(0,0,0, .1); padding: 20px;">
+            
+            <center>
+                <!--  class="transform-table"  -->
+                <table id="table1" class="">
+                    <tbody>
+                        <tr>
+                            <td style="width:48.75pt;" rowspan="2">
+                                <p style="text-align:justify"><span>排名</span></p>
+                            </td>
+                            <td style="width:48.75pt;" rowspan="2">
+                                <p style="text-align:justify"><span>总分</span></p>
+                            </td>
+                            <td style="width:48.7pt;" rowspan="2">
+                                <p style="text-align:justify"><span>地区</span></p>
+                            </td>
+                            <td style="width:332.35pt;" colspan="6">
+                                <p style="text-align:justify"><span>地区内高校数量</span><span>/</span><span>所</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>重点大学</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>一般大学</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>民办院校</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>独立学院</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>高职高专院校</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>总数</span></p>
+                            </td>
+                        </tr>
+                        
+                             
+                        <tr>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>6</span></p>
+                            </td>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>57.35</span></p>
+                            </td>
+                            <td style="width:48.7pt;">
+                                <p style="text-align:justify"><span>山东</span></p>
+                            </td>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>3</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>41</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>26</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>11</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>74</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>140</span></p>
+                            </td>
+                        </tr>
+                         
+                        
+                    </tbody>
+                </table>
+            </center>
+        </div>
+        
+                <div id="" style=" background-color: rgba(0,0,0, .1); padding: 20px;">
+            
+            <center>
+                <table id="table2" style="zoom:50%;" >
+                    <tbody>
+                        <tr>
+                            <td style="width:48.75pt;" rowspan="2">
+                                <p style="text-align:justify"><span>排名</span></p>
+                            </td>
+                            <td style="width:48.75pt;" rowspan="2">
+                                <p style="text-align:justify"><span>总分</span></p>
+                            </td>
+                            <td style="width:48.7pt;" rowspan="2">
+                                <p style="text-align:justify"><span>地区</span></p>
+                            </td>
+                            <td style="width:332.35pt;" colspan="6">
+                                <p style="text-align:justify"><span>地区内高校数量</span><span>/</span><span>所</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>重点大学</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>一般大学</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>民办院校</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>独立学院</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>高职高专院校</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>总数</span></p>
+                            </td>
+                        </tr>
+                        
+                             
+                        <tr>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>6</span></p>
+                            </td>
+                            <td style="width:48.75pt;">
+                                <p style="text-align:justify"><span>57.35</span></p>
+                            </td>
+                            <td style="width:48.7pt;">
+                                <p style="text-align:justify"><span>山东</span></p>
+                            </td>
+                            <td style="width:50.05pt;">
+                                <p style="text-align:justify"><span>3</span></p>
+                            </td>
+                            <td style="width:50.35pt;">
+                                <p style="text-align:justify"><span>41</span></p>
+                            </td>
+                            <td style="width:60.5pt;">
+                                <p style="text-align:justify"><span>26</span></p>
+                            </td>
+                            <td style="width:55.4pt;">
+                                <p style="text-align:justify"><span>11</span></p>
+                            </td>
+                            <td style="width:60.85pt;">
+                                <p style="text-align:justify"><span>74</span></p>
+                            </td>
+                            <td style="width:55.2pt;">
+                                <p style="text-align:justify"><span>140</span></p>
+                            </td>
+                        </tr>
+                         
+                        
+                    </tbody>
+                </table>
+            </center>
+        </div>
+        <div>
+            <button id="btn_scale" class="btn">缩小</button>
+            <button id="btn_css" class="btn">css属性</button>
+        </div>
+        
+        <script src="js/8_tableTransform.js"></script>
+    </body>
+
+</html>

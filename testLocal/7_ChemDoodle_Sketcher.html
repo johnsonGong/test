@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>分子式 sketcher</title>
+
+        <link rel="stylesheet" href="libs/ChemDoodleWeb.css" />
+        <script type="text/javascript" src="libs/ChemDoodleWeb.js"></script>
+
+        <!--these two are required by the SketcherCanvas plugin-->
+        <link rel="stylesheet" href="libs/uis/jquery-ui-1.10.3.custom.css" type="text/css">
+        <script type="text/javascript" src="libs/uis/ChemDoodleWeb-uis.js"></script>
+
+        <script type="text/javascript" src="libs/jquery-1.11.1.js" ></script>
+        
+        <script type="text/javascript" src="js/7_chemDoodleSketcher.js"></script>
+
+    </head>
+
+    <body>
+
+        <p>aaaa</p>
+
+        <div id="temp_con">
+            <script>
+                PAGE.sketcher = setSketcher_2();
+            </script>
+
+            <canvas id="sketcher_1">
+            </canvas>
+
+        </div>
+        <div>
+        <button id="check_btn">ChemDoodle JSON</button>
+        </div>
+
+    </body>
+
+</html>
