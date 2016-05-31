@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>前端 内存缓存</title>
+		
+		<link rel="stylesheet" href="css/main.css" />
+		
+		<script src="libs/jquery-1.11.1.js"></script>
+		
+		<script src="js/15_cache.js"></script>
+	</head>
+	
+	<body>
+	    <div>
+	        <p> 简介: </p>
+	        <p> 使用 js 执行 DOM操作，记录相关内存数据. </p>
+	        <p>  1. 线程 -- setTimeout, setInterval </p>
+	        <p>  2. 虚拟的节点对象 -- document.createDocumentFragment() </p>
+	    </div>
+	    
+	    <div class="training-panel">
+	        
+	        <div id="left_data" class="item-panel">
+	            
+	            <i id="tmp_test_i"> i </i>
+	            <table id="table3">
+	                <thead>
+	                    <tr>
+                            <td style="width:17.95pt;">
+                                <p style="text-align:justify">
+                                    <span>排名table3</span></p>
+                            </td>
+                            <td style="width:71.75pt;">
+                                <p style="text-align:justify">
+                                    <span>院校名称</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>总分</span></p>
+                            </td>
+                            <td style="width:41.8pt;" colspan="2">
+                                <p style="text-align:justify">
+                                    <span>地区内序</span></p>
+                            </td>
+                            <td style="width:41.8pt;" colspan="2">
+                                <p style="text-align:justify">
+                                    <span>类型序</span></p>
+                            </td>
+                        </tr>
+	                </thead>
+	                
+	                <tbody>
+	                    <tr>
+                            <td style="width:17.95pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                            <td style="width:71.75pt;">
+                                <p style="text-align:justify">
+                                    <span>北京大学</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>100.00</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>北京</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>综合</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                        </tr>
+	                </tbody>
+	            </table>
+	            
+	            
+	        </div>
+	        
+	        <div id="right_result" class="item-panel">
+	            
+	            <img id="test_dog" src="data/dog.jpg" width="200px" />
+	            
+	            <p> 追加 1000 行 tr</p>
+	            
+	            <div class="btn-area">
+	            <button id="normal_btn">常规 - normal</button>
+	            <button id="async_btn">异步线程-setTimeut</button>
+	            <button id="frag_btn">虚拟节点-createDocumentFragment</button>
+	            
+	            <button id="tmp_btn">图片offsetWidth</button>
+	            </div>
+	        </div>
+	        
+	    </div>
+	</body>
+</html>

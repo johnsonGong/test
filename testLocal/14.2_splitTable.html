@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>练习-拆分表格</title>
+
+        <link rel="stylesheet" href="css/main.css" />
+
+        <script type="text/javascript" src="libs/zepto.min.js"></script>
+        <script type="text/javascript" src="js/14_splitTable.js"></script>
+    </head>
+
+    <body>
+
+        <div class="training-panel">
+            <div id="left_data" class="item-panel">
+
+                <table id="table3">
+                    <tbody>
+                        <tr>
+                            <td style="width:17.95pt;">
+                                <p style="text-align:justify">
+                                    <span>排名</span></p>
+                            </td>
+                            <td style="width:71.75pt;">
+                                <p style="text-align:justify">
+                                    <span>院校名称</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>总分</span></p>
+                            </td>
+                            <td style="width:41.8pt;" colspan="2">
+                                <p style="text-align:justify">
+                                    <span>地区内序</span></p>
+                            </td>
+                            <td style="width:41.8pt;" colspan="2">
+                                <p style="text-align:justify">
+                                    <span>类型序</span></p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="width:17.95pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                            <td style="width:71.75pt;">
+                                <p style="text-align:justify">
+                                    <span>北京大学北京大学北京大学北京大学北京大学北京大学北京大学北京大学</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>100.00</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>北京</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>综合</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:17.95pt;">
+                                <p style="text-align:justify">
+                                    <span>2</span></p>
+                            </td>
+                            <td style="width:71.75pt;">
+                                <p style="text-align:justify">
+                                    <span>清华大学</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>99.96</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>北京</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>2</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>理工</span></p>
+                            </td>
+                            <td style="width:17.9pt;" rowspan="3">
+                                <p style="text-align:justify">
+                                    <span>2</span></p>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="width:17.95pt;">
+                                <p style="text-align:justify">
+                                    <span>3</span></p>
+                            </td>
+                            <td style="width:71.75pt;">
+                                <p style="text-align:justify">
+                                    <span>浙江大学浙江大学浙江大学浙江大学浙江大学浙江大学</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>89.02</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>浙江</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>综合</span></p>
+                            </td> 
+                        </tr>
+
+                        <tr>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>4</span></p>
+                            </td>
+
+                            <td style="width:71.7pt;">
+                                <p style="text-align:justify">
+                                    <span>东南大学</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>64.98</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>江苏</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>2</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>理工</span></p>
+                            </td>
+                            <!--
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>6</span></p>
+                            </td>
+                            
+                            	 
+                            -->
+                        </tr>
+
+                        <tr>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>5</span></p>
+                            </td>
+                            <td style="width:71.7pt;">
+                                <p style="text-align:justify">
+                                    <span>中国科学技术大学</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>63.67</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>安徽</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>1</span></p>
+                            </td>
+                            <td style="width:23.9pt;">
+                                <p style="text-align:justify">
+                                    <span>理工</span></p>
+                            </td>
+                            <td style="width:17.9pt;">
+                                <p style="text-align:justify">
+                                    <span>7</span></p>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div id="right_result" class="item-panel">
+
+            </div>
+            
+            <div class="btn-area">
+                <button id="get_tbl_html" class="btn">获取表格HTML</button>
+                <button id="split_tbl" class="btn">拆分表格</button>
+            </div>
+            
+            
+            
+        </div>
+        
+        
+    </body>
+
+</html>
